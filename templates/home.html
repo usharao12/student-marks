@@ -13,18 +13,19 @@
             <thead>
                 <tr>
                     <th>S.NO</th>
-                    <th>Full_Name</th>
-                    <th>Graduation</th>
                     <th>Phone Number</th>
+                    <th>Marks</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 {% for x in students %}
                 <tr>
                     <td>{{forloop.counter}}</td>
-                    <td><a href="{% url 'student_result' x.id %}">{{x.first_name}} {{x.last_name}}</td>
-                    <td>{{x.graduation}}</td>
-                    <td>{{x.phone_number}}</td>
+                    <td><a href="{% url 'student_result' x.id %}">{{x.phone_number}} </td>
+                    <td>{{x.marks}}</td>
+                    
+                    
                 </tr>
                 {% endfor %}
             </tbody>
